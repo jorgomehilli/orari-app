@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { ClassComponent } from './class/class.component';
+import { MenaxhoLendetComponent } from './menaxho-lendet/menaxho-lendet.component';
+import { OrariProvimeveComponent } from './orari-provimeve/orari-provimeve.component';
+import { ImportLendetComponent } from './import-lendet/import-lendet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    ClassComponent
+    ClassComponent,
+    MenaxhoLendetComponent,
+    OrariProvimeveComponent,
+    ImportLendetComponent
   ],
   imports: [
     BrowserModule,
