@@ -20,3 +20,10 @@ a:hover {
 .round {
   border-radius: 50%;
 }
+
+
+.header{
+  color: #ffa44e;
+  text-align: center;
+ margin-top: 90px;
+ }

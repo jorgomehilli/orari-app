@@ -8,6 +8,8 @@ import { ClassComponent } from './class/class.component';
 import { MenaxhoLendetComponent } from './menaxho-lendet/menaxho-lendet.component';
 import { OrariProvimeveComponent } from './orari-provimeve/orari-provimeve.component';
 import { ImportLendetComponent } from './import-lendet/import-lendet.component';
+import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ImportLendetComponent } from './import-lendet/import-lendet.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

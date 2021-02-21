@@ -1,23 +1,26 @@
 <a routerLink="/menu" class="previous round">&#8249;</a>
 
 <div class="container">
-  <div class="form-group form-inline" style=" margin-top: 50px;">
+  <div class="form-group form-inline">
     <label for="klasa">Dega: </label>
-    <select style="margin-left: 20px;" name="klasa" id="klasa">
-      <option value="412">Master i Shkencave ne "Teknologji Informacioni"</option>
+    <select (change)="onChangeDega($event.target.value)" style="margin-left: 20px;" name="klasa" id="klasa">
+      <option value="">--</option>
+      <option *ngFor="let item of degaSearchData" value="{{item}}">{{item}}</option>
     </select>
 
     <label style="margin-left: 20px;" for="viti">Viti: </label>
-    <select style="margin-left: 10px;" name="viti" id="viti">
-        <option value="2">2</option>
+    <select (change)="onChangeViti($event.target.value)" style="margin-left: 10px;" name="viti" id="viti">
+      <option value="">--</option>
+      <option *ngFor="let item of vitiSearchData" value="{{item}}">{{item}}</option>
     </select>
 
     <label style="margin-left: 20px;" for="paraleli">Paraleli: </label>
-    <select  style="margin-left: 10px;" name="paraleli" id="paraleli">
-        <option value=""></option>
+    <select (change)="onChangeParaleli($event.target.value)" style="margin-left: 10px;" name="paraleli" id="paraleli">
+      <option value="">--</option>
+      <option *ngFor="let item of paraleliSearchData" value="{{item}}">{{item}}</option>
     </select>
 
-    <button style="margin-left: 20px;">Kerko</button>
+    <button (click)="getFilteredData()" style="margin-left: 20px;">Kerko</button>
   </div>
   <table style="margin-top: 30px;" class="table">
     <thead>
@@ -34,23 +37,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let row of tableData">
+        <td>{{row.data}}</td>
+        <td>{{row.ora}}</td>
+        <td>{{row.dega}}</td>
+        <td>{{row.lenda}}</td>
+        <td>{{row.vitiLenda}}</td>
+        <td>{{row.vitiStudent}}</td>
+        <td>{{row.paraleli}}</td>
+        <td>{{row.klasa1}}</td>
+        <td>{{row.Klasa2}}</td>
       </tr>
     </tbody>
   </table>
