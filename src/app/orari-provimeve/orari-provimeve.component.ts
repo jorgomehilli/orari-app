@@ -13,36 +13,15 @@ export class OrariProvimeveComponent implements OnInit {
   viti: string = '';
   paraleli: string = '';
 
-  //
-  searchData: any[] = [
-    { dega: 'Master Info', viti: '1', paraleli: 'B1' },
-    { dega: 'Master Tik', viti: '2', paraleli: 'B122' },
-    { dega: 'agron3', viti: 'shehu3', paraleli: 'B13' },
-  ];
-
   degaSearchData: any[] = [
-    'Master Info',
-    'Master Tik',
-    'Inxhinieri Matematike Dhe Informatike',
+    'Bachelor në \"Informatikë\"'
   ];
 
   vitiSearchData: any[] = [1, 2, 3];
 
   paraleliSearchData: any[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
-  tableData: any[] = [
-    {
-      data: '19 Mars 2021',
-      ora: '9:00- 10:00',
-      dega: 'Informatike',
-      lenda: 'C++',
-      vitiLenda: '2',
-      vitiStudent: '2',
-      paraleli: 'B1',
-      klasa1: '301C',
-      klasa2: '301C'
-    }
-  ];
+  tableData: any[] = [];
 
   ngOnInit(): void {}
 

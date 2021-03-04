@@ -20,7 +20,7 @@ export class DataService {
    */
   getOrariProvimevePerStudentMeParams(viti, dega, paraleli) {
     return this.http.get<any>(
-      `https://localhost:44307/orariProvimeveStudent/${dega}/${viti}/${paraleli}`
+      `https://localhost:44310/orariProvimeveStudent/${dega}/${viti}/${paraleli}`
     );
   }
 }
